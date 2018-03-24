@@ -1,3 +1,5 @@
+'use strict';
+
 $(document).ready(function() {
   $('.delete-recipe').on('click', function() {
     console.log('hej');
