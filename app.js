@@ -46,9 +46,9 @@ app.post('/add', (req, res, next) => {
     (err, result) => {
       if (err) {
         console.log(err);
-        res.redirect('/', 400);
+        res.redirect('/');
       } else {
-        res.redirect('/', 201);
+        res.redirect('/');
       }
     }
   );
