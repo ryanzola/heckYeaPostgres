@@ -2,3 +2,16 @@ body {
   margin-top: 10px;
   background: #f9f9f9;
 }
+
+.thumb {
+  object-fit: cover;
+}
+
+.thumb-side {
+  height: 80px;
+  width: 80px;
+}
+
+.thumb-bottom {
+  max-height: 250px;
+}

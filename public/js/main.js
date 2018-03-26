@@ -26,5 +26,6 @@ $(document).ready(function() {
     $('#edit-form-ingredients').val($(this).data('ingredients'));
     $('#edit-form-directions').val($(this).data('directions'));
     $('#edit-form-id').val($(this).data('id'));
+    $('#edit-form-thumbnail').val($(this).data('thumbnail'));
   });
 });
