@@ -57,3 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
+# you cant have my precious environment variables
+nodemon.json

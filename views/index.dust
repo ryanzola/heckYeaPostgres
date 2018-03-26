@@ -6,7 +6,7 @@
   
   {#recipes}
     <div class="card card-body bg-light mb-2">
-      <div class="media">
+      <div class="media d-flex align-items-center">
         <img class="thumb thumb-side mr-3" src="{thumbnail}" alt="Generic placeholder image">
         <div class="media-body">
           <h4 class="mt-0">
@@ -21,8 +21,8 @@
       <div class="collapse" id="recipe_{id}">
         <br />
         <br />
-        <p><strong>Ingredients:</strong>{ingredients}</p>
-        <p><strong>Directions:</strong>{directions}</p>
+        <p><strong>Ingredients:</strong><br />{ingredients}</p>
+        <p><strong>Directions:</strong><br />{directions}</p>
         <br />
         <hr />
         <button 

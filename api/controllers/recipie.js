@@ -24,12 +24,9 @@ exports.addRecipe = (req, res, next) => {
     'INSERT INTO recipes(name, ingredients, directions, thumbnail) VALUES($1, $2, $3, $4)',
     [req.body.name, req.body.ingredients, req.body.directions, req.file.path],
     (err, result) => {
-      if (err) {
-        console.log(err);
-        res.redirect('/');
-      } else {
-        res.redirect('/');
-      }
+      if (err) console.log(err);
+
+      res.redirect('/');      
     }
   );
 }
