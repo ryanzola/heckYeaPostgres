@@ -19,7 +19,6 @@ exports.getAll = (req, res, next) => {
 }
 
 exports.addRecipe = (req, res, next) => {
-  console.log(req.file)
   client.query(
     'INSERT INTO recipes(name, ingredients, directions, thumbnail) VALUES($1, $2, $3, $4)',
     [req.body.name, req.body.ingredients, req.body.directions, req.file.path],
