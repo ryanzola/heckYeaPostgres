@@ -13,10 +13,16 @@ const port = process.env.PORT || 3000;
 const recipeRoutes = require('./api/routes/recipe')
 
 // Database connection
-const client = new Client({
-  connectionString: process.env.DB_URI
-});
+var client = new pg.Client({
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT,
+  host: process.env.DB.HOST,
+  ssl: true
+}); 
 client.connect();
+
 
 
 // Assign Dust engine to .dust files
