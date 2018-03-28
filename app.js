@@ -14,11 +14,7 @@ const recipeRoutes = require('./api/routes/recipe')
 
 // Database connection
 const client = new Client({
-  user: process.env.DB_USER,
-  host: 'localhost',
-  database: 'recipiebookdb',
-  password: process.env.DB_PASSWORD,
-  port: 5433
+  connectionString: process.env.DB_URI
 });
 client.connect();
 
