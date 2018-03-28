@@ -2,7 +2,7 @@ const { Client } = require('pg');
 
 // Database connection
 const client = new Client({
-  connectionString = process.env.DB_URI
+  connectionString: process.env.DB_URI
 });
 client.connect();
 
