@@ -1,3 +1,4 @@
+const fs = require('fs');
 const { Client } = require('pg');
 
 // Database connection
@@ -44,6 +45,25 @@ exports.editRecipe = (req, res, next) => {
 }
 
 exports.deleteRecipe = (req, res, next) => {
+  console.log(res.body);
+
+  client.query(
+    'SELECT thumbnail FROM recipes WHERE id = $1',
+    [req.params.id],
+    (err, result) => {
+      const path = result.rows[0].thumbnail.trim();
+      console.log(path);
+
+      fs.unlink(`${path}`, error => {
+        if (error) {
+          throw error
+        };
+
+        console.log(`${path} has been deleted`)
+      })
+    }
+  )
+
   client.query(
     'DELETE FROM recipes WHERE id = $1',
     [req.params.id],
